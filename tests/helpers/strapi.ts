@@ -65,11 +65,14 @@ export async function setupStrapi() {
 export async function stopStrapi() {
   if (instance) {
     instance.destroy();
-
+    
     const tmpDbFile = strapi.config.get(
       "database.connection.connection.filename"
     );
 
+      console.log("tmpDbFile", strapi.config.get("database.connection"));
+
+      
     if (fs.existsSync(tmpDbFile)) {
       fs.unlinkSync(tmpDbFile);
     }

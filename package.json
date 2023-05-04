@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "test": "jest"
+    "test": "jest --forceExit --detectOpenHandles"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",

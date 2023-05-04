@@ -32,6 +32,26 @@ npm run build
 yarn build
 ```
 
+### `debug`
+
+Launch.json enable debug
+
+```
+        {
+            "name": "Strapi v4 Debug",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "node",
+            "runtimeArgs": ["--inspect"],
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/node_modules/@strapi/strapi/bin/strapi.js",
+            "args": ["develop"],
+            "autoAttachChildProcesses": true,
+            "console": "integratedTerminal"
+        }
+```
+
 ## ⚙️ Deployment
 
 Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
